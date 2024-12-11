@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    background-color: #354f52; /* Incrementar el tamaño de letra general */
+    background-color: #354f52;
 }
 
 /* Header */
@@ -12,13 +12,13 @@ header {
     background-color: #52796f;
     color: #cad2c5;
     text-align: center;
-    padding: 30px; /* Incrementar el espacio para un título más prominente */
+    padding: 30px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem; /* Incrementar el tamaño del título */
-    font-weight: bold; /* Aplicar negrita */
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 /* Navbar */
@@ -45,7 +45,7 @@ nav ul li a {
 
 /* Carrusel de imágenes */
 .carrusel {
-    margin: 40px 0; /* Más espacio entre las secciones */
+    margin: 40px 0;
 }
 
 .carousel-inner img {
@@ -55,41 +55,41 @@ nav ul li a {
 
 /* Cards */
 .cards {
-    padding: 40px; /* Más espacio alrededor de las cards */
+    padding: 40px;
     display: flex;
     justify-content: space-around;
-    gap: 40px; /* Incrementar el espacio entre las cards */
+    gap: 40px;
 }
 
 .card-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Añadir espacio adicional entre las cards */
+    gap: 20px;
 }
 
 .card {
-    width: 400px; /* Hacer las cards más grandes */
-    padding: 30px; /* Incrementar el relleno interno */
+    width: 400px;
+    padding: 30px;
     border: 1px solid #cad2c5;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.8s ease, box-shadow 0.8s ease; /* Agregar transición para interactividad */
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
     background-color: #cad2c5;
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Movimiento hacia arriba */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Incrementar la sombra */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card h2 {
-    font-size: 2rem; /* Incrementar tamaño del texto de los títulos de las cards */
+    font-size: 2rem;
     color: #333;
 }
 
 .card p {
-    font-size: 1.2rem; /* Incrementar tamaño del texto en las cards */
+    font-size: 1.2rem;
     color: #666;
 }
 
@@ -97,7 +97,7 @@ nav ul li a {
     display: inline-block;
     background-color: #52796f;
     color: #cad2c5;
-    padding: 15px 30px; /* Incrementar el tamaño del botón */
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 4px;
     margin-top: 10px;
@@ -106,31 +106,31 @@ nav ul li a {
 /* Sección de Descarga */
 .descarga {
     text-align: center;
-    padding: 60px; /* Incrementar el espacio de la sección */
-    margin-top: 40px; /* Más espacio entre las secciones */
+    padding: 60px;
+    margin-top: 40px;
     background-color: #cad2c5;
 }
 
 .descarga h2 {
-    font-size: 2.5rem; /* Incrementar tamaño del título */
+    font-size: 2.5rem;
     color: #333;
 }
 
 .descarga p {
-    font-size: 1.2rem; /* Incrementar tamaño del texto descriptivo */
+    font-size: 1.2rem;
     margin-bottom: 30px;
 }
 
 .descarga img {
-    width: 250px; /* Hacer el QR más grande */
+    width: 250px;
     height: auto;
 }
 
 .descarga .btn {
     background-color: #52796f;
     color: #cad2c5;
-    padding: 20px 30px; /* Incrementar el tamaño del botón */
-    font-size: 1.2rem; /* Incrementar tamaño del texto del botón */
+    padding: 20px 30px;
+    font-size: 1.2rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -140,9 +140,9 @@ nav ul li a {
 footer {
     background-color: #52796f;
     color: #cad2c5;
-    padding: 20px 40px; /* Incrementar espacio del footer */
+    padding: 20px 40px;
     text-align: center;
-    font-size: 1.2rem; /* Incrementar tamaño del texto */
+    font-size: 1.2rem;
 }
 
 footer p {
@@ -154,4 +154,114 @@ footer p {
 footer a {
     color: #cad2c5;
     text-decoration: none;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (celulares) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .cards {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .descarga {
+        padding: 40px;
+    }
+
+    .descarga h2 {
+        font-size: 2rem;
+    }
+
+    .descarga p {
+        font-size: 1.1rem;
+    }
+
+    .descarga img {
+        width: 200px;
+    }
+
+    .descarga .btn {
+        padding: 15px 25px;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    footer p {
+        margin-right: 10px;
+    }
+
+    .card .btn {
+        padding: 12px 25px;
+    }
+}
+
+/* Pantallas extra pequeñas (dispositivos más pequeños) */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .descarga h2 {
+        font-size: 1.8rem;
+    }
+
+    .descarga p {
+        font-size: 1rem;
+    }
+
+    .descarga img {
+        width: 180px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        margin-right: 5px;
+    }
 }

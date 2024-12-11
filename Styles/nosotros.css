@@ -7,7 +7,7 @@ body {
     background-color: #354f52;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    min-height: 100vh;
 }
 
 /* Header */
@@ -50,18 +50,18 @@ nav ul li a {
 main {
     color: #354f52;
     padding: 30px;
-    background-color: #cad2c5; /* Fondo más claro */
+    background-color: #cad2c5;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
-    max-width: 1200px; /* Limitar el ancho del contenedor */
-    flex-grow: 1; /* Asegura que el contenido principal ocupe todo el espacio disponible */
+    max-width: 1200px;
+    flex-grow: 1;
 }
 
 main h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    font-weight: bold; /* Títulos en negritas */
+    font-weight: bold;
     color: #354f52;
 }
 
@@ -78,7 +78,7 @@ footer {
     padding: 20px 40px;
     text-align: center;
     font-size: 1.2rem;
-    margin-top: auto; /* Hace que el footer se empuje hacia el final */
+    margin-top: auto;
 }
 
 footer p {
@@ -128,4 +128,76 @@ form button {
 
 form button:hover {
     background-color: #2c3e50;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (celulares) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Reduce el tamaño de fuente */
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Reduce el tamaño del título */
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    nav ul {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    main {
+        padding: 15px;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    main h2 {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+
+/* Pantallas extra pequeñas (dispositivos más pequeños) */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.6rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
