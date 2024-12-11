@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAppGas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/home.css">
+    <script>
+        // Función para detectar el tamaño de la pantalla
+        function checkDevice() {
+            var isMobile = window.innerWidth <= 768; // Ancho máximo para considerar como móvil
+            var qrSection = document.getElementById('qr-section');
+            var downloadButtonSection = document.getElementById('download-button-section');
+
+            if (isMobile) {
+                qrSection.style.display = 'none'; // Ocultar QR
+                downloadButtonSection.style.display = 'block'; // Mostrar botón de descarga
+            } else {
+                qrSection.style.display = 'block'; // Mostrar QR
+                downloadButtonSection.style.display = 'none'; // Ocultar botón de descarga
+            }
+        }
+
+        // Llamar a la función cuando la página carga
+        window.onload = checkDevice;
+        // También llamar a la función cuando la ventana cambia de tamaño
+        window.onresize = checkDevice;
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>MyAppGas</h1>
+        <nav>
+            <ul>
+                <li><a href="pages/nosotros.html">Nosotros</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="#descarga">Descarga</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección 1: Carrusel de imágenes -->
+    <section id="carrusel" class="carrusel">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/img1.jpg" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img2.jpg" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img3.jpg" class="d-block w-100" alt="Imagen 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Cards -->
+    <section id="cards" class="cards">
+        <div class="card-container">
+            <div class="card">
+                <h2>Nosotros</h2>
+                <p>Conoce más sobre nuestra empresa, misión, visión y valores. Estamos comprometidos con ofrecerte lo mejor.</p>
+                <a href="pages/nosotros.html" class="btn">Ver más</a>
+            </div>
+            <div class="card">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para resolver tus dudas. No dudes en ponerte en contacto con nosotros para más información.</p>
+                <a href="pages/contacto.html" class="btn">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: QR o botón de descarga de la app -->
+    <section id="descarga" class="descarga">
+        <h2>Descargar la aplicación</h2>
+        <p>Escanea el siguiente código QR para descargar nuestra aplicación o haz clic en el botón.</p>
+        
+        <!-- Sección de QR (se muestra solo en PC) -->
+        <div id="qr-section">
+            <img src="img/qrMyAppGas.png" alt="Código QR" />
+        </div>
+
+        <!-- Sección de Botón de descarga (se muestra solo en móvil) -->
+        <div id="download-button-section" style="display:none;">
+            <a href="https://raw.githubusercontent.com/SebaJeldres/MyAppGas/main/MyAppGas.apk" class="btn btn-primary mt-3" download>Descargar ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Correo: <a href="mailto:contacto@myappgas.com">contacto@myappgas.com</a></p>
+        <p>Teléfono: +56 9 8765 4321</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
